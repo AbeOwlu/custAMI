@@ -117,7 +117,7 @@ sudo mv $TEMPLATE_DIR/iptables-restore.service /etc/eks/iptables-restore.service
 
 sudo yum install -y device-mapper-persistent-data lvm2
 
-INSTALL_DOCKER="${INSTALL_DOCKER:-true}"
+INSTALL_DOCKER="${INSTALL_DOCKER:-false}"
 if [[ "$INSTALL_DOCKER" == "true" ]]; then
     sudo amazon-linux-extras enable docker
     sudo groupadd -og 1950 docker
